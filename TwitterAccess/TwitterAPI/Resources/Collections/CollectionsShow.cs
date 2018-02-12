@@ -1,29 +1,30 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace TwitterAccess.TwitterAPI
 {
-	public class AccountVerifyCredentials : ApiBase
+	public class CollectionsShow : ApiBase
 	{
 		#region Public Properties
 
 		public override string Name
 		{
-			get { return "account/verify_credentials"; }
+			get { return "collections/show"; }
 		}
 
 		public override string URL
 		{
-			get { return "account/verify_credentials.json"; }
+			get { return "collections/show.json"; }
 		}
 
 		public override string ResourceType
 		{
-			get { return "account"; }
+			get { return "collections"; }
 		}
 
 		public override string ObjectType
 		{
-			get { return "verify_credentials"; }
+			get { return "show"; }
 		}
 
 		public override string MethodType
@@ -45,15 +46,34 @@ namespace TwitterAccess.TwitterAPI
 
 		#endregion
 
+		#region Public Methods
+
+		public override bool CheckRequiredParameters()
+		{
+			if (base.CheckRequiredParameters())
+			{
+				Parameter id = Parameters.FirstOrDefault(x => x.Key == "id");
+
+				if (id == null || string.IsNullOrEmpty(id.Value))
+				{
+					return false;
+				}
+
+				return true;
+			}
+
+			return false;
+		}
+
+		#endregion
+
 		#region Protected Methods
 
 		protected override void GetParameters()
 		{
 			Parameters = new List<Parameter>();
 
-			Parameters.Add(new Parameter("include_entities", ParamStatus.Optional, ParamType.boolean));
-			Parameters.Add(new Parameter("skip_status", ParamStatus.Optional, ParamType.boolean));
-			Parameters.Add(new Parameter("include_email", ParamStatus.Optional, ParamType.boolean));
+			Parameters.Add(new Parameter("id", ParamStatus.Required, ParamType.text));
 		}
 
 		#endregion

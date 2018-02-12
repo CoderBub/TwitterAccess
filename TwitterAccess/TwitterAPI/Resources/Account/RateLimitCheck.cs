@@ -70,7 +70,7 @@ namespace TwitterAccess.TwitterAPI
 		{
 			Parameters = new List<Parameter>();
 
-			Parameters.Add(new Parameter("resources", ParamStatus.Optional));
+			Parameters.Add(new Parameter("resources", ParamStatus.Optional, ParamType.text));
 		}
 
 		#endregion

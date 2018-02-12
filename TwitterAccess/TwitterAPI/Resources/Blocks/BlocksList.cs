@@ -2,28 +2,28 @@
 
 namespace TwitterAccess.TwitterAPI
 {
-	public class AccountVerifyCredentials : ApiBase
+	public class BlocksList : ApiBase
 	{
 		#region Public Properties
 
 		public override string Name
 		{
-			get { return "account/verify_credentials"; }
+			get { return "blocks/list"; }
 		}
 
 		public override string URL
 		{
-			get { return "account/verify_credentials.json"; }
+			get { return "blocks/list.json"; }
 		}
 
 		public override string ResourceType
 		{
-			get { return "account"; }
+			get { return "blocks"; }
 		}
 
 		public override string ObjectType
 		{
-			get { return "verify_credentials"; }
+			get { return "list"; }
 		}
 
 		public override string MethodType
@@ -51,9 +51,9 @@ namespace TwitterAccess.TwitterAPI
 		{
 			Parameters = new List<Parameter>();
 
+			Parameters.Add(new Parameter("cursor", ParamStatus.Optional, ParamType.number));
 			Parameters.Add(new Parameter("include_entities", ParamStatus.Optional, ParamType.boolean));
 			Parameters.Add(new Parameter("skip_status", ParamStatus.Optional, ParamType.boolean));
-			Parameters.Add(new Parameter("include_email", ParamStatus.Optional, ParamType.boolean));
 		}
 
 		#endregion

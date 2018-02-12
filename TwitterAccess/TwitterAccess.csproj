@@ -54,6 +54,11 @@
     <Compile Include="TwitterAPI\Parameter.cs" />
     <Compile Include="TwitterAPI\Resources\Account\AccountSettings.cs" />
     <Compile Include="TwitterAPI\Resources\Account\AccountVerifyCredentials.cs" />
+    <Compile Include="TwitterAPI\Resources\Blocks\BlocksIds.cs" />
+    <Compile Include="TwitterAPI\Resources\Blocks\BlocksList.cs" />
+    <Compile Include="TwitterAPI\Resources\Collections\CollectionsEntities.cs" />
+    <Compile Include="TwitterAPI\Resources\Collections\CollectionsList.cs" />
+    <Compile Include="TwitterAPI\Resources\Collections\CollectionsShow.cs" />
     <Compile Include="TwitterAPI\Resources\Followers\FollowersIds.cs" />
     <Compile Include="TwitterAPI\Resources\Followers\FollowersList.cs" />
     <Compile Include="TwitterAPI\Resources\Friendships\FriendshipShow.cs" />
@@ -67,7 +72,7 @@
     <Compile Include="TwitterAPI\Resources\Lists\ListsStatuses.cs" />
     <Compile Include="TwitterAPI\Resources\Lists\ListsSubscribers.cs" />
     <Compile Include="TwitterAPI\Resources\Lists\ListsSubscriptions.cs" />
-    <Compile Include="TwitterAPI\Resources\RateLimitCheck.cs" />
+    <Compile Include="TwitterAPI\Resources\Account\RateLimitCheck.cs" />
     <Compile Include="TwitterAPI\Resources\Search\SearchTweets.cs" />
     <Compile Include="TwitterAPI\Resources\Statuses\StatusRetweets.cs" />
     <Compile Include="TwitterAPI\Resources\Statuses\StatusShow.cs" />
@@ -79,8 +84,6 @@
     <Compile Include="TwitterAPI\Resources\Users\UsersShow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TwitterAPI\Resources\Blocks\" />
-    <Folder Include="TwitterAPI\Resources\Collections\" />
     <Folder Include="TwitterAPI\Resources\DirectMessages\" />
     <Folder Include="TwitterAPI\Resources\Favorites\" />
     <Folder Include="TwitterAPI\Resources\Geo\" />

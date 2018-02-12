@@ -24,6 +24,8 @@ namespace TwitterAccess.TwitterAPI
 
 		public ParamType ParamType { get; set; }
 
+		public int MaxValue { get; set; }
+
 		public Parameter() { }
 
 		public Parameter(string key, ParamStatus status)
@@ -38,6 +40,14 @@ namespace TwitterAccess.TwitterAPI
 			Key = key;
 			Status = status;
 			ParamType = paramType;
+		}
+
+		public Parameter(string key, ParamStatus status, ParamType paramType, int maxValue)
+		{
+			Key = key;
+			Status = status;
+			ParamType = paramType;
+			MaxValue = maxValue;
 		}
 	}
 }
